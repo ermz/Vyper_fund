@@ -72,4 +72,19 @@ def endFund(_id: uint256):
 def distributeToken(_id: uint256):
     assert self.projectHash[_id].owner == msg.sender, "You are not the owner of this project"
     assert self.projectHash[_id].fullyFunded == True
+    # for donor in range(0, 100):
+    #     amount: uint256 = self.donoDonors[_id]
+    #     assert amount > 0
+    #     self.donoList[_id][donor] = 0
+    #     send(donor, amount)
+    # Range will go all over every donor who donated and will break if there is no donor
+    # Donors will receive a token of the distributors choice by making their token public
+    # Donors will then be able to hold/sell at their pleasure
+    # range(0...100):
+
+@external
+def moveTokens(_id: uint256, _amount: uint256):
+    # Will be able to check whether or not a certain donor has a certain amount of tokens they can transfer
+    assert 1 > 0
+
     
